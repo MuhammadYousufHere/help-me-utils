@@ -5,7 +5,10 @@
   "main": "src/main.js",
   "type": "module",
   "scripts": {
-    "test": "jest"
+    "test": "mocha src/test",
+    "test:watch": "npm t -- -w",
+    "coverage": "nyc npm t",
+    "coverage:check": "nyc check-coverage --statements 100 --branches 100 --functions 100"
   },
   "repository": {
     "type": "git",
