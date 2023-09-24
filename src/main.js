@@ -1,1 +1,3 @@
-console.log('hello')
+import { String } from './string'
+
+export { String }
