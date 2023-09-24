@@ -1,0 +1,25 @@
+{
+  "name": "help-me-utils",
+  "version": "1.0.0",
+  "description": "JavaScipt's day to day helper utils for everyone",
+  "main": "src/main.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MuhammadYousufHere/help-me-utils.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "helper",
+    "utils",
+    "functions"
+  ],
+  "author": "Muhammad Yousuf <khanyousufmy80@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MuhammadYousufHere/help-me-utils/issues"
+  },
+  "homepage": "https://github.com/MuhammadYousufHere/help-me-utils#readme"
+}
