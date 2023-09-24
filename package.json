@@ -1,6 +1,6 @@
 {
   "name": "help-me-utils",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "JavaScipt's day to day helper utils for everyone",
   "main": "src/main.js",
   "type": "module",
