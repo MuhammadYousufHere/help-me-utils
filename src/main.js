@@ -1,3 +1,3 @@
-import { String } from './string'
+import * as StrMethods from './string.js'
 
-export { String }
+export { StrMethods }

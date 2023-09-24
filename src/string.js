@@ -9,12 +9,12 @@
  * */
 
 const toTitle = (str) => {
-  if (typeof string !== 'string')
-    throw new Error('toTile only accepts a string as an argument.')
-  return String(string)
+  if (typeof str !== 'string')
+    throw new Error('toTitle only accepts a string as an argument.')
+  return String(str)
     .split(' ')
     .map((char) => char.charAt(0).toUpperCase() + char.substring(1))
     .join(' ')
 }
 
-export const String = { toTitle }
+export { toTitle }
