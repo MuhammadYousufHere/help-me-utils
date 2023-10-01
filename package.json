@@ -3,9 +3,10 @@
   "version": "1.0.12",
   "description": "JavaScipt's day to day helper utils for everyone",
   "main": "src/main.js",
-  "type": "module",
   "scripts": {
-    "test": "mocha src/test",
+    "prebuild": "rimraf dist",
+    "build": "npm run prebuild && babel --out-dir dist --ignore src/**/*.test.js src",
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file ./mocha-setup.js",
     "test:watch": "npm t -- -w",
     "coverage": "nyc npm t",
     "coverage:check": "nyc check-coverage --statements 100 --branches 100 --functions 100"
@@ -27,8 +28,32 @@
   },
   "homepage": "https://github.com/MuhammadYousufHere/help-me-utils#readme",
   "devDependencies": {
+    "@babel/cli": "7.22.15",
+    "@babel/core": "7.22.20",
+    "@babel/preset-env": "7.22.20",
+    "@babel/register": "7.22.15",
     "chai": "4.3.8",
     "mocha": "10.2.0",
-    "nyc": "15.1.0"
+    "nyc": "15.1.0",
+    "rimraf": "5.0.1"
+  },
+  "nyc": {
+    "report-dir": "./coverage",
+    "lines": 95,
+    "statements": 95,
+    "functions": 100,
+    "branches": 90,
+    "include": [
+      "src/*.js"
+    ],
+    "exclude": [
+      "src/main.js"
+    ],
+    "reporter": [
+      "lcov",
+      "text"
+    ],
+    "cache": true,
+    "all": true
   }
 }
