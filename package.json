@@ -6,7 +6,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "npm run prebuild && babel --out-dir dist --ignore src/**/*.test.js src",
-    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register --file ./mocha-setup.js",
+    "test": "npx mocha \"src/**/*.test.js\" --recursive --require @babel/register",
     "test:watch": "npm t -- -w",
     "coverage": "nyc npm t",
     "coverage:check": "nyc check-coverage --statements 100 --branches 100 --functions 100"
