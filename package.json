@@ -1,8 +1,9 @@
 {
   "name": "help-me-utils",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "JavaScipt's day to day helper utils for everyone",
   "main": "src/main.js",
+  "type": "module",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "npm run prebuild && babel --out-dir dist --ignore src/**/*.test.js src",
