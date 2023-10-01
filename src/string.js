@@ -13,7 +13,10 @@ const toTitle = (str) => {
     throw new Error('toTitle only accepts a string as an argument.')
   return String(str)
     .split(' ')
-    .map((char) => char.charAt(0).toUpperCase() + char.substring(1))
+    .map((char) => {
+      if (char === char.toUpperCase()) return char
+      return char.charAt(0).toUpperCase() + char.substring(1).toLowerCase()
+    })
     .join(' ')
 }
 
